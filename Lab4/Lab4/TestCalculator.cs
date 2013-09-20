@@ -33,29 +33,43 @@ namespace Lab4
             }
             catch (FormatException fe)
             {
-                Console.ForegroundColor = ConsoleColor.Red;
+                SetConsoleColourToRed();
                 Console.WriteLine("ERROR, FORMAT EXCEPTION :: \n" + fe.Message);
                 Console.WriteLine("\nPlease try entering a number again...\n");
+                
+                ResetConsoleColour();
                 return GetDoubleFromUser();
             }
             catch (OverflowException oe)
             {
-                Console.ForegroundColor = ConsoleColor.Red;
+                SetConsoleColourToRed();
                 Console.WriteLine("ERROR, OVERFLOW EXCEPTION :: \n" + oe.Message);
                 Console.WriteLine("\nPlease try entering a number again...\n");
+                ResetConsoleColour();
                 return GetDoubleFromUser();
             }
             catch (Exception e)
             {
-                Console.ForegroundColor = ConsoleColor.Red;
+                SetConsoleColourToRed();
                 Console.WriteLine("ERROR, UNKNOWN EXCEPTION :: \n" + e.Message);
+                ResetConsoleColour();
                 Console.WriteLine("\nPlease try entering a number again...\n");
                 return GetDoubleFromUser();
             }
             finally
             {
-                Console.ForegroundColor = ConsoleColor.White;
+                ResetConsoleColour();
             }
+        }
+
+        private void ResetConsoleColour()
+        {
+            Console.ForegroundColor = ConsoleColor.White;
+        }
+
+        private void SetConsoleColourToRed()
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
         }
     }
 }
