@@ -11,7 +11,7 @@ namespace Lab4
         //Decided on returning a String as
         //it could then return an error message, because if it
         //were a double, it would still need to return a number
-        //if an error was thrown
+        //if an error was thrown.
         public static string DivideTwoNumbers(double x, double y)
         {
             try
