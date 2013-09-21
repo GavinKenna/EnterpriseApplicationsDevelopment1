@@ -10,8 +10,13 @@ namespace Lab4
     {
         static void Main(string[] args)
         {
+            //Part 1
             TestCalculator tc = new TestCalculator();
             tc.Run();
+
+
+            //Part 2
+            TestModule.Run();
         }
     }
 }
