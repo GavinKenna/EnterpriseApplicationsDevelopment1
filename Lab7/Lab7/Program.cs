@@ -23,7 +23,7 @@ namespace Lab7
             sclass[4] = s;
 
             Console.WriteLine(sclass[3].ToString());
-            Console.WriteLine(sclass[9].ToString());
+            Console.WriteLine(sclass[2].ToString());
 
             Console.Read();
         }
